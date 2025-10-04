@@ -21,6 +21,21 @@ fun main() {
 
     //Задание 6
     println("Количество опыта необходимое для достижения 5 уровня: ${calculateXP(5)}")
+
+    //Задание 8
+    castSpell()
+    castSpell("Vengeful spirit")
+    castSpell("Abyss Shriek", 100)
+
+    //Задание 9
+    createWeapon("Old Nail")
+    createWeapon("Sharpened Nail", 9)
+    createWeapon(21, isMagic = false)
+
+    //Задание 10
+    heal()
+    heal(25)
+    heal(40, isPotion = true)
 }
 
 //Задание 1
@@ -48,4 +63,41 @@ fun calculateXP(level: Int): Int {
     return level * 1000
 }
 
-//Задание 7
+//Задание 8
+fun castSpell() {
+    println("Каст случайного заклинания!")
+}
+
+fun castSpell(spell: String) {
+    println("Каст заклинания $spell!")
+}
+
+fun castSpell(spell: String, power: Int) {
+    println("Каст $spell с силой $power!")
+}
+
+//Задание 9
+fun createWeapon(name: String) {
+    println("Оружие: $name")
+}
+
+fun createWeapon(name: String, damage: Int) {
+    println("Оружие: $name (Урон: $damage)")
+}
+
+fun createWeapon(damage: Int, isMagic: Boolean) {
+    println("${if (isMagic) "Магическое" else "Обычное"} оружие (Урон: $damage)")
+}
+
+//Задание 10
+fun heal() {
+    println("Востановленно 10 HP!")
+}
+
+fun heal(amount: Int) {
+    println("Востановленно $amount HP!")
+}
+
+fun heal(amount: Int, isPotion: Boolean) {
+    println("${if (isPotion) "Выпито зелье" else "Заклинание лечения"} (+$amount HP)")
+}
