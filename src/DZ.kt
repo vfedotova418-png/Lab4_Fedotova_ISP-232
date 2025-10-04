@@ -1,45 +1,74 @@
 fun main() {
     //Задание 1
+    println("Задание 1")
+    println()
     showGameLogo()
     showGameLogo()
+    println()
 
     //Задание 2
+    println("Задание 2")
+    println()
     showEnemy("Hornet", 3)
     showEnemy("Pure Vessel", 10)
+    println()
 
     //Задание 3
+    println("Задание 3")
+    println()
     spawnEnemy("Skarrwing")
     spawnEnemy("Skarrsinger Karmelita", isBoss = true)
+    println()
 
     //Задание 4
+    println("Задание 4")
+    println()
     spawnEnemy("Shakra", health = 300)
     spawnEnemy("Король Тьмы", 500, true)
+    println()
 
     //Задание 5
+    println("Задание 5")
+    println()
     createQuest("Найти кота")
     createQuest("Спасти принцессу", 100, true)
+    println()
 
     //Задание 6
+    println("Задание 6")
+    println()
     println("Количество опыта необходимое для достижения 5 уровня: ${calculateXP(5)}")
+    println()
 
     //Задание 7
+    println("Задание 7")
+    println()
     print("Введите название вашего предмета (с большой буквы): ")
     val item = readln()
     val answer = checkInventory(item)
     if (answer) { println("Предмет '$item' есть в инвенторе") }
     else { println("Предмета '$item' нет в инвенторе") }
+    println()
 
     //Задание 8
+    println("Задание 8")
+    println()
     castSpell()
     castSpell("Vengeful spirit")
     castSpell("Abyss Shriek", 100)
+    println()
 
     //Задание 9
+    println("Задание 9")
+    println()
     createWeapon("Old Nail")
     createWeapon("Sharpened Nail", 9)
     createWeapon(21, isMagic = false)
+    println()
 
     //Задание 10
+    println("Задание 10")
+    println()
     heal()
     heal(25)
     heal(40, isPotion = true)
