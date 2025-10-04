@@ -22,6 +22,13 @@ fun main() {
     //Задание 6
     println("Количество опыта необходимое для достижения 5 уровня: ${calculateXP(5)}")
 
+    //Задание 7
+    print("Введите название вашего предмета (с большой буквы): ")
+    val item = readln()
+    val answer = checkInventory(item)
+    if (answer) { println("Предмет '$item' есть в инвенторе") }
+    else { println("Предмета '$item' нет в инвенторе") }
+
     //Задание 8
     castSpell()
     castSpell("Vengeful spirit")
@@ -61,6 +68,12 @@ fun createQuest(title: String, reward: Int = 50, isMain: Boolean = false) {
 //Задание 6
 fun calculateXP(level: Int): Int {
     return level * 1000
+}
+
+//Задание 7
+fun checkInventory(item: String): Boolean {
+    val inventory = arrayOf("Меч", "Лук", "Компот")
+    return item in inventory
 }
 
 //Задание 8
